@@ -24,7 +24,6 @@
                     gender: 'Female'
                 }
 
-                //this.updateUser=this.updateUser.bind(this);
             }
 
             componentWillMount(){
@@ -34,14 +33,6 @@
             componentDidMount(){
                 console.log('============componentDidMount()==============')
             }
-/*
-            updateUser=()=>{
-                this.setState({
-                    name: 'lhui',
-                    age: 50
-                })
-            }
-*/
 
             updateUser(){
                 console.log(this)
@@ -79,12 +70,6 @@
                 </div>
             }
         }
-/*
-        ReactDOM.render(
-            <Hello name="Long Hui" age="20" gender="Female"/>,
-            document.getElementById('app')
-        );
-*/
 
     ReactDOM.render(<Hello/>, document.getElementById('app'));
     </script>
