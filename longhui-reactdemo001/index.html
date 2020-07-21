@@ -23,8 +23,6 @@
                     age: 35,
                     gender: 'Female'
                 }
-
-                //this.updateUser=this.updateUser.bind(this);
             }
 
             componentWillMount(){
@@ -34,17 +32,8 @@
             componentDidMount(){
                 console.log('============componentDidMount()==============')
             }
-/*
-            updateUser=()=>{
-                this.setState({
-                    name: 'lhui',
-                    age: 50
-                })
-            }
-*/
 
-            updateUser(){
-                console.log(this)
+            updateUser=()=>{
                 this.setState({
                     name: 'lhui',
                     age: 50
@@ -71,11 +60,7 @@
                     <h1> Hello: {this.state.name}</h1>
                     <h1>age: {this.state.age}</h1>
                     <h1>gender: {this.state.gender}</h1>
-                    <button onClick={this.updateUser}>Event bind method 1(bind this to updateUser() in constructor)</button>
-                    <br/>
-                    <button onClick={() => this.updateUser()}>Event bind method 2(Use this to invoke the updateUser() in onClick())</button>
-                    <br/>
-                    <button onClick={this.updateUser.bind(this)}>Event bind method 3(Use bind to the updateUser() in onClick())</button>
+                    <button onClick={this.updateUser}>Update User</button>
                 </div>
             }
         }
