@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React demo 001</title>
+    
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <div class="app"></div>
+
+    <script type="text/babel">
+        class Hello extends React.Component{
+            constructor(props){
+                console.log('=========Initialization==========')
+                super(props);
+
+                this.state = {
+                    name: 'Long Hui',
+                    age: 35,
+                    gender: 'Female'
+                }
+            }
+
+            componentWillMount(){
+                console.log('===========componentWillMount()==============')
+            }
+
+            componentDidMount(){
+                console.log('============componentDidMount()==============')
+            }
+
+            updateUser=()=>{
+                this.setState({
+                    name: 'lhui',
+                    age: 50
+                })
+            }
+
+            shouldComponentUpdate(){
+                //If ture then the render() will be invoked if the state has changed.
+                console.log('============shouldComponentUpdate():true============')
+                return true;
+            }
+
+            componentWillUpdate(){
+                console.log('=============componentWillUpdate()===============')
+            }
+
+            componentDidUpdate(){
+                console.log('==============componentDidUpdate()================')
+            }
+
+            render(){
+                console.log('===============render()================')
+                return <div>
+                    <h1> Hello: {this.state.name}</h1>
+                    <h1>age: {this.state.age}</h1>
+                    <h1>gender: {this.state.gender}</h1>
+                    <button onClick={this.updateUser}>Update User</button>
+                </div>
+            }
+        }
+/*
+        ReactDOM.render(
+            <Hello name="Long Hui" age="20" gender="Female"/>,
+            document.getElementById('app')
+        );
+*/
+
+    ReactDOM.render(<Hello/>, document.getElementById('app'));
+    </script>
+</body>
+</html>

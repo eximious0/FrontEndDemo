@@ -1,0 +1,10 @@
+{
+  "name": "lhui-yarndemo-v1",
+  "version": "2.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "lhui": "npm -v"
+  }
+}
