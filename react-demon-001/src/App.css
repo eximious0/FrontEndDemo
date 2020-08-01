@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+}
+
+.App p {
+  color: blue;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
